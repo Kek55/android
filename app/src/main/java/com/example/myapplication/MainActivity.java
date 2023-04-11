@@ -2,35 +2,40 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    /*  private TextView resultTextView;
-    private EditText number_field_1, number_field_2;
-    private Button add_button; */
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-    /*    resultTextView = findViewById(R.id.resultTextView);
-        number_field_1 = findViewById(R.id.number_field_1);
-        number_field_2 = findViewById(R.id.number_field_2);
-        add_button = findViewById(R.id.add_button);
+        Button button4 = findViewById(R.id.button4);
 
-        add_button.setOnClickListener(new View.OnClickListener() {
+       TextView main_text = findViewById(R.id.maintext);
+        button4.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                float num1 = Float.parseFloat(number_field_1.getText().toString());
-                float num2 = Float.parseFloat((number_field_2.getText().toString()));
-                float res = num1 + num2;
-                resultTextView.setText(String.valueOf(res)); */
+            public void onClick(View view)
+            {
+            showInfo(main_text.getText().toString(), button4);
             }
+        });
+            }
+            public void ButtonClick(View v) { showInfo(((Button) v).getText().toString(),((Button) v) );}
+    private void showInfo(String text, Button btn) {
+        btn.setText("уже нажали");
+        btn.setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+        Toast.makeText(this, text, Toast.LENGTH_LONG).show();}
         };
 
