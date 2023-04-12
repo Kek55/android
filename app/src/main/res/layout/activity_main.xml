@@ -4,18 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
+    android:background=""
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:onClick="startnewActivity"
-        android:text="Перейти на новую страницу"
+    <ImageButton
+        android:id="@+id/penguion"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="100dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="пингвин"
+        app:srcCompat="@drawable/penguin" />
+
+    <ImageButton
+        android:id="@+id/cat"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitEnd"
+        android:contentDescription="котик"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pngtransparentcat" />
 </androidx.constraintlayout.widget.ConstraintLayout>

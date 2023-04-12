@@ -15,7 +15,5 @@ public class secondactivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_secondactivity);
     }
-    public void goBack (View v) {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);}
+
 }
